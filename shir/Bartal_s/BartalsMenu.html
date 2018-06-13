@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="description" content="Bartal's - vegan restaurant">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="author" content="Shir Bartal">
+    <title>Bartal's - vegan restaurant</title>
+    <link rel="icon" href="22.jpg"/>
+    <link rel="stylesheet" type="text/css" href="bartalstyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script href="bartaljs.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="col-12">
+        <center><h1><b><i>B A R T A L 's</i></b></h1>
+        <i>Vegan Friendly</i>
+      </center>
+      </header>
+      <table class="col-11">
+        <tr class="col-6">
+          <th id="drinksMenu">Drinks&Cocktails<a href="drinksmenuu.html"><i class="glyphicon glyphicon-arrow-right"></i></a></th>
+          <th id="foodMenu">Food<a href="foodmenu.html"><i class="glyphicon glyphicon-arrow-right"></i></a></th>
+        </tr>
+        <tr class="col-6">
+          <td><img id="drinksPhoto" src="cocktail.jpeg" class="img-thumbnail"></td>
+          <td><img id="foodPhoto" src="food.jpg" class="img-thumbnail"></td>
+        </tr>
+        <tr>
+          <td><p id="pDrinks" class="collapse">All our Cocktails are Vegan.<br>
+            Combines all sorts of flavors, made with high quality,<br>
+            seasonal and local ingredients.</p>
+          </td>
+          <td><p id="pFood" class="collapse">The kitchen is Israeli, with oriental scent<br>
+            Our food is prepared fresh daily, made with high quality,<br>
+            seasonal and local ingredients.<br>
+            We recommend ordering a variety of dishes to the table<br>
+            and sharing with your loved ones.</p>
+          </td>
+        </tr>
+        <tr class="col-6">
+          <th id="specialsMenu">Specials <a href="specialsmenu.html"><i class="glyphicon glyphicon-arrow-right"></i></a></th>
+          <th id="desertsMenu">Deserts<a href="desertmenu.html"><i class="glyphicon glyphicon-arrow-right"></i></a></th>
+        </tr>
+        <tr class="col-6">
+          <td><img id="specialsPhoto" src="india.jpg" class="img-thumbnail"></td>
+          <td><img id="desertPhoto" src="desert.jpg" class="img-thumbnail"></td>
+        </tr>
+        <tr>
+          <td><p id="pSpecials" class="collapse">The kitchen is Israeli, with oriental scent<br>
+            Our food is prepared fresh daily, made with high quality,<br>
+            seasonal and local ingredients.<br>
+            On the specials we make unique courses from around the world.</p>
+          </td>
+          <td><p id="pDeserts" class="collapse">All our deserts are Vegan and yummy.<br>
+            Prepared fresh daily, made with high quality,<br>
+            seasonal and local ingredients.</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  <script type="text/javascript">
+    $(function(){
+      $("#drinksPhoto").click(function(){
+        $("#pDrinks").slideToggle();
+      });
+      $("#foodPhoto").click(function(){
+        $("#pFood").slideToggle();
+      });
+      $("#specialsPhoto").click(function(){
+        $("#pSpecials").slideToggle();
+      });
+      $("#desertPhoto").click(function(){
+        $("#pDeserts").slideToggle();
+      });
+    });
+  </script>
+  </body>
+  </html>

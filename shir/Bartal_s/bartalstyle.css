@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+header {
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  }
+h1 {
+  color:white;
+  position: sticky;
+  }
+  body {
+    margin: 0px;
+    padding: 8px;
+    background-image: url("111.jpg");
+    position: absolute;
+    background-size: 100%;
+    background-repeat: repeat;
+    height: 100%;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  h2 {
+    color: white;
+  }
+  table{
+    color: white;
+    align-items: center;
+    text-align: left;
+    font-size: 16px;
+  }
+  th {
+    font-size: 40px;
+  }
+  .btn {
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.price {
+  font-size: 36px;
+  text-decoration: inherit;
+  padding: 30px;
+}
+
+#drinksPhoto {
+  cursor: pointer;
+  width: 40%;
+}
+#foodPhoto{
+  cursor: pointer;
+    width: 80%;
+}
+#specialsPhoto{
+  cursor: pointer;
+    width: 50%;
+}
+#desertPhoto{
+  cursor: pointer;
+    width: 60%;
+}
+#pDrinks{
+  display: none;
+  color: black;
+  background-color: white;
+  opacity: 0.7;
+  width: 40%;
+}
+#pFood{
+  display: none;
+  color: black;
+  background-color: white;
+  opacity: 0.7;
+  width: 80%;
+}
+#pSpecials{
+  display: none;
+  color: black;
+  background-color: white;
+  opacity: 0.7;
+  width: 50%;
+}
+#pDeserts{
+  display: none;
+  color: black;
+  background-color: white;
+  opacity: 0.7;
+  width: 60%;
+}
+  #menu{
+    padding: 30px;
+    margin: 20px;
+  }
+  #contactuspage{
+    padding: 30px;
+    margin: 20px;
+  }
