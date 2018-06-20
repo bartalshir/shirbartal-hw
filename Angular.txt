@@ -3,14 +3,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <body>
 
-<div ng-app="" ng-init="quantity=1;price=5">
+<div ng-app="" ng-init="names=[
+{name:'Jani',country:'Norway'},
+{name:'Hege',country:'Sweden'},
+{name:'Kai',country:'Denmark'}]">
 
-<h2>Cost Calculator</h2>
-
-Quantity: <input type="number" ng-model="quantity">
-Price: <input type="number" ng-model="price">
-
-<p><b>Total in dollar:</b> {{quantity * price}}</p>
+<p>Looping with objects:</p>
+<ul>
+  <li ng-repeat="x in names">
+  {{ x.name + ', ' + x.country }}</li>
+</ul>
 
 </div>
 
