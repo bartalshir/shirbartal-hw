@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<body>
+<body ng-app="">
 
-<div ng-app="" ng-init="names=[
+<div ng-init="names=[
 {name:'Jani',country:'Norway'},
 {name:'Hege',country:'Sweden'},
 {name:'Kai',country:'Denmark'}]">
