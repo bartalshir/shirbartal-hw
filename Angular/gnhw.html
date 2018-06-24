@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<center>
+    <div class="centr">
+      <h1><i>Enter your Info:</i><br></h1>
+      <textarea style="color:{{myCol}};font-size:{{mySize}};text-transform:{{mycaps}};letter-spacing:{{mygaps}}"
+       ng-model="description">
+      </textarea><br><br>
+      <hr>
+      <br>
+      <h2><i>choose your size, color, caps and gaps:</i></h2>
+      <input type="text" placeholder="font size" ng-model="mySize"><br>
+      <input style="color:{{myCol}}" ng-model="myCol"><br>
+      <input type="text" style="text-transform:{{mycaps}}" ng-model="mycaps"><br>
+      <input type="text" style="letter-spacing:{{mygaps}}" ng-model="mygaps">
+
+      <br>
+      <br>
+    </div>
+  </center>
+
+
+  <script type="text/javascript">
+
+  var app = angular.module("myApp",[]);
+  app.controller("myCtrl", function($scope){
+    $scope.mySize="32px";
+    $scope.myCol="green";
+    $scope.mycaps="capitalize";
+    $scope.mygaps="5px";
+
+  });
+
+
+  </script>
+</body>
+</html>
