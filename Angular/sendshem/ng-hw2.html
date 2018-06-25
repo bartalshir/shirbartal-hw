@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style media="screen">
+  body{
+    background-image: url(1212.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+  }
+  .regis{
+    background-color: white;
+    opacity: 0.8;
+    width: 60%;
+  }
+  input.ng-invalid {
+    background-color: lightblue;
+  }
+  input.ng-valid {
+  background-color: lightgreen;
+  }
+
+</style>
+<body>
+  <div ng-app="" ng-controller="myCtrl">
+    <center>
+      <h1>Register Now!</h1>
+      <div class="regis">
+        <p><br>Full Name<br></p>
+        <input type="text" placeholder="Full Name" ng-model="myName">
+        <p>Insert your Email address<br></p>
+        <input type="email" name="myAddress" ng-model="text">
+        <!-- <span ng-show="myCtrl.myAddress.$error.email">Not a valid e-mail address</span>
+        לא עובד הולידציה של המייל -->
+        <p>Insert your password<br></p>
+        <input type="text" placeholder="Password" ng-model="myPass">
+        <p></p>
+        <input type="text" placeholder="Confirm your password" ng-model="myconpass">
+        <p><br><button>Submit</button></p>
+      </div>
+    </center>
+  </div>
+</body>
+<script type="text/javascript">
+
+// var app = angular.module("myApp",[]);
+// app.controller("myCtrl", function(){
+//
+// });
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+  <!-- <wednsday_Element></wednsday_Element>
+
+  <script type="text/javascript">
+    var app = angular.module("myApp",[]);
+    app.directive("wednsdayElement", function(){
+      return {
+        // restrict: "E"
+        template: "<h1>Created Wednsday Element</h1>"
+      }
+    });
+  </script> -->
+
+  <div>
+    <p>Enter your Info:<br></p>
+    <input style="color:{{myCol}}" type="text" placeholder="Full Name" ng-model="fullName"><br>
+    <input style="color:{{myCol}}" type="text" placeholder="Password" ng-model="password"><br>
+    <textarea style="color:{{myCol}}" placeholder="Describe yourself" ng-model="description">
+    </textarea><br><br>
+    <!-- <input type="color" style="color:{{myCol}}" ng-scope="myCol"> -->
+    <input style="color:{{myCol}}" ng-model="myCol">
+      <br>
+      <hr>
+      <b>your info:</b><br>
+    <span style="color:{{myCol}}">{{fullName}}<br>{{password}}<br>{{description}}</span>
+  </div>
+
+  <script type="text/javascript">
+
+  var app = angular.module("myApp",[]);
+  app.controller("myCtrl", function($scope){
+    $scope.fullName="";
+    $scope.password="";
+    $scope.description="";
+    $scope.myCol="green";
+  });
+
+  </script>
+</body>
+</html>

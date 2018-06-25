@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Bartal</title>
+    <meta name="author" content="Shir Bartal">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+      <div>Your info:</div><button id="loadData">Click me!</button>
+      <button id="loadAge">Age?</button>
+  </body>
+</html>
+<script type="text/javascript">
+  $(function(){
+    $("#loadData").click(function(){
+      $.ajax({
+      url:"lala.csv",
+      dataType:"text",
+      success:function(data)
+      {
+        var cellData = data.split(/\r?\n|\r/);
+        var MyWord = "";
+        var m="";
+        var flag=true;
+
+           for (var i = 0; i < cellData.length; i++) {
+             for (var j = 0; j < cellData[i].length; j++) {
+                  if(cellData[i][j]!=','&&(j+1)!=cellData[i].length){
+                    MyWord+=cellData[i][j];
+                  }
+                  else if((j+1)==cellData[i].length){
+                    MyWord+=cellData[i][j];
+
+                    if (MyWord=="lior bartal") {
+                      m=(cellData[i]);
+                      flag=false;
+                    }
+                    MyWord="";
+                  }
+                  else{
+                    if (MyWord=="lior bartal") {
+                      m=(cellData[i]);
+                      flag=false;
+                    }
+                    MyWord="";
+                  }
+          }
+        }
+        if (flag==true){
+          alert("No Data Found");
+        }
+        var i=0;
+        while (m[i]!=',') {
+          i++;
+        }
+        MyWord="";
+        i=i+1;
+        for(;i<m.length;i++){
+          MyWord+=m[i];
+        }
+        alert(MyWord);
+        }
+      });
+    });
+  });
+        $("#loadAge").click(function(){
+          $.ajax({
+          url:"lala.csv",
+          dataType:"text",
+          success:function(data)
+          {
+            var cellData = data.split(/\r?\n|\r/);
+            var counter=0;
+            var MyWord="";
+
+            for (var i = 0; i < cellData.length; i++) {
+              for (var j = 0; j < cellData[i].length; j++) {
+                   if(cellData[i][j]!=','){
+                     MyWord+=cellData[i][j];
+                   }
+
+                   else if(cellData[i][j]==','){
+                     break;
+                   }
+
+                alert(MyWord);
+                MyWord="";
+
+               //  if (MyWord=='2') {
+               //    counter++;
+               // }
+               //  alert(counter);
+
+          }
+        }
+      }
+    });
+  });
+</script>

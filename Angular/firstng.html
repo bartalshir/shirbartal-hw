@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="" ng-init={"inp1=3;inp2=5"}; ng-init="names=[
+{name:'janny',counrty:'norway'},
+{name:'hera',counrty:'sweden'},
+{name:'kai',counrty:'denmark'}]"; ng-init="cities=["tff","lll","ggg","jj"]">
+  <h1>Calculate:</h1>
+  <div ng-app="" >
+  <p>quantity:</p>
+  <input type="number" ng-model="inp1">
+  <p>cost:</p>
+  <input type="number" ng-model="inp2">
+  <br>
+  <p>total cost:{{inp1*inp2}}</p>
+</div>
+<div >
+<ul>
+<li ng-repeat="x in cities">
+  {{x}} </li>
+</ul>
+</div>
+<div>
+  <p>looping</p>
+  <ul>
+    <li ng-repeat="x in names">
+      {{x.name+', '+x.country}}</li>
+    </ul>
+</div>
+</body>
+</html>

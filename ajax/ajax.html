@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Bartal</title>
+    <meta name="author" content="Shir Bartal">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <style media="screen">
+    table{
+      width: 80%;
+      border: none;
+      border-width: thin;
+    }
+    td{
+      padding: 20px;
+    }
+  </style>
+  <body>
+    <div>sales:</div><button>Click me!</button>
+    <table id="bling">
+      <tr>
+        <td id="cel1-1"></td>
+        <td id="cel1-2"></td>
+        <td id="cel1-3"></td>
+      </tr>
+      <tr>
+        <td id="cel2-1"></td>
+        <td id="cel2-2"></td>
+        <td id="cel2-3"></td>
+      </tr>
+      <tr>
+        <td id="cel3-1"></td>
+        <td id="cel3-2"></td>
+        <td id="cel3-3"></td>
+      </tr>
+
+  </body>
+  </html>
+<script type="text/javascript">
+  $(function(){
+    $("button").click(function(){
+      $.ajax({
+			url:"lala.csv",
+			dataType:"numbers",
+			success:function(data)
+			{
+				var cellData = data.split(/\r?\n|\r/);
+				var MyWord = "";
+				var flag = true;
+
+        for (var i = 0; i < cellData.length; i++) {
+          for (var j = 0; j < cellData.length; j++) {
+            if (cellData!=",") {
+              MyWord+=cellData[i][j];
+              break;
+              flag=false;
+            }
+            document.getElementById("cel1-1").innerHTML=MyWord;
+            flag=true;
+            }
+            else if{
+              MyWord+=cellData[i][j];
+              break;
+              document.getElementById("cel1-2").innerHTML=MyWord;
+              flag=true;
+            }
+          }
+        }
+      });
+    });
+  });
+
+</script>

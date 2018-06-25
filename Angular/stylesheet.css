@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+header {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 30px;
+  text-align: center;
+  }
+.centr{
+  background-color: white;
+  opacity: 0.8;
+  padding: 20px
+  text-align: center;
+  width: 60%;
+}
+h1 {
+  font-size: 46px;
+  }
+body {
+  margin: 0px;
+  padding: 8px;
+  background-image: url("123.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+input.ng-empty{
+  background-color: yellow;
+}
+input.ng-not-empty{
+  background-color: lightblue;
+}
+input.ng-touched{
+  text-decoration: underline;
+}
+input.ng-untouched{
+  color: blue;
+}

@@ -11,6 +11,15 @@
       <textarea style="color:{{myCol}};font-size:{{mySize}};text-transform:{{mycaps}};letter-spacing:{{mygaps}}"
        ng-model="description">
       </textarea><br><br>
+      <form name="myForm" ng-init="myText='bartal@ggg'">
+      Email:<br>
+      <input type="text" name="myAdress" ng-model="myText">
+      <p>Dirty: {{myForm.myAdress.$dirty}}</p>
+      <p>Touched: {{myForm.myAdress.$touched}}</p>
+      </form>
+      <form>
+        <input type="text" ng-model="inpname">
+      </form>
       <hr>
       <br>
       <h2><i>choose your size, color, caps and gaps:</i></h2>
@@ -23,7 +32,6 @@
       <br>
     </div>
   </center>
-
 
   <script type="text/javascript">
 

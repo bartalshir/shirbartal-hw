@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="description" content="register">
+    <meta name="author" content="Shir Bartal">
+    <title>Pyara</title>
+    <link rel="icon" href="sticker.png"/>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="javasitestyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+    <header><h1>Pyara</h1><br>
+      live eckologic Life
+    </header>
+    <main id="register" class="col-7"><h2>Register Pyara Now</h2>
+        <p>To get our latest products, news, tips and sales.<br>
+          To live healthy, eckologic life, non-plastic products in various uses.</p><br>
+
+      <form action="register" method="get">
+
+            <i class="fa fa-user icon"></i>
+            <input id="inputfullname" type="text" name="full name" placeholder="full name"><br>
+            <p id="errfullname" style="display:none" class="alert alert-danger"><strong>ERORR!</strong> use 6 characters</p><br>
+
+            <input id="inputpass" type="password" placeholder="password" value=""><br>
+            <input  id="inputpass2" type="password" placeholder="confirm password" value=""><br>
+            <p id="errpass" style="display:none" class="alert alert-danger"><strong>ERORR!</strong> password not valid</p><br>
+
+            <i class="fa fa-envelope icon"></i>
+            <input id="inputmail" type="email" name="mail" placeholder="Insert your Email"><br>
+            <p id="errmail" style="display:none" class="alert alert-danger"><strong>ERORR!</strong> email not valid</p><br>
+
+            <input id="gendmale" type="radio" name="gender" value="male">Male<br>
+            <input type="radio" name="gender" value="female">Female<br>
+            <button id="confirm" type="button" onclick=fullname() >Create Account</button>
+
+      </form>
+    </main>
+    <div id="registersuccess" style="display: none">
+      <p><h2>Thank you for your registration!</h2><br>Here are your details:</p><br>
+      <p id="ggg"></p>
+    </div>
+      <!-- <div float: right>
+        <img src="true.jpg" alt="envelope" class="img-thumbnail float-right d-block" width="20%">
+      </div>
+    לא מצליחה להזיז את התמונה לימין -->
+    </div>
+
+
+    <script type="text/javascript">
+     var flag=true;
+
+    function fullname() {
+      flag=true;
+      var str=document.getElementById("inputfullname").value;
+      if (str.length<6){
+        document.getElementById("errfullname").style.display='block';
+        flag=false;
+      }
+      pass();
+    }
+
+    function pass(){
+      var str1=document.getElementById("inputpass").value;
+      var str2=document.getElementById("inputpass2").value;
+      if (str1.lenght!=8 && str1!=str2) {
+        document.getElementById("errpass").style.display='block';
+        flag=false;
+      }
+      inpmail();
+    }
+
+    function inpmail(){
+         var count=0;
+         var str=document.getElementById("inputmail").value;
+        for (var i = 0; i < str.length; i++) {
+          if (str.charAt(i)=='@'){
+            count++;
+          }
+        }
+         if (count==1){
+            if(str.charAt(0)=='@'||str.charAt(str.length-1)=='@'){
+             document.getElementById("errmail").style.display='block';
+             flag=false;
+            }
+          }
+          else {
+            document.getElementById("errmail").style.display='block';
+            flag=false;
+          }
+          person();
+    }
+
+    function person(){
+
+      var g= "m";
+      if((document.getElementById("gendmale").checked) == true){
+       g= "Male";
+     }
+     else {
+       g="Female";
+     }
+        conf();
+    }
+
+    function conf(){
+      function Account(userName,password,mail,g){
+        this.userName = userName;
+        this.password = password;
+        this.mail = mail;
+        this.g = g;
+      }
+
+      var A1=new Account(this.userName,this.password,this.mail,this.g);
+
+      if (flag==true) {
+        document.getElementById("register").style.display='none';
+        document.getElementById("registersuccess").style.display='block';
+        document.getElementById("ggg").innerHTML=" "+A1.userName+" "+A1.password;
+      }
+    }
+    // זה בטוח משהו ממש בקטנה עניין של סינטקס, כי הכל עובד רק הערכים לא עוברים הלאה..
+
+    </script>
+  </body>
+</html>
