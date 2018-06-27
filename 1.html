@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+<input type="text" ng-model="name">
+{{ErrorName()}}
+
+<input type="password" ng-model="pass" style="background-color:{{myBackGroundColor}}">
+<input type="password" ng-model="confPass" style="background-color:{{myBackGroundColor2}}">
+
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.name = ""; 
+	$scope.myBackGroundColor = "blue";
+	$scope.myBackGroundColor2 = "blue";
+	$scope.pass = "";
+	$scope.confPass= "";
+	$scope.ErrorName = function(){
+		if(!($scope.name == "")){
+			if(!($scope.pass=="")){
+			 $scope.myBackGroundColor = "white";
+			 $scope.myBackGroundColor2 = "blue";
+			}
+			if($scope.confPass == $scope.pass && $scope.pass!=""){
+				$scope.myBackGroundColor = "green";
+				$scope.myBackGroundColor2 = "green";	
+			}
+			else if(!($scope.pass=="")){
+			 $scope.myBackGroundColor = "white";
+			 $scope.myBackGroundColor2 = "blue";
+			}
+			else{
+			 $scope.myBackGroundColor = "blue";
+			 $scope.myBackGroundColor2 = "blue";
+			}
+			
+			
+			return "";
+		}
+		else{
+			return "Not Valid";
+		}
+		
+	};
+	
+
+
+});
+</script>
+
+</body>
+</html>
